@@ -1,0 +1,123 @@
+Token Information:
+
+1. Contract type: ERC-20 standard Token
+
+2. Test environment: Ropesten testnet (Ethereum Test platform)
+
+3. Contract Address: 0xfEE0d0871EAe9dB0be0362e444d224927149F649
+
+4. Etherscan (Ropestan testnet) https://ropsten.etherscan.io/address/0xfee0d0871eae9db0be0362e444d224927149f649
+
+5. ERC20 token explorer (Ropestan testnet) link: https://ropsten.etherscan.io/token/0xfee0d0871eae9db0be0362e444d224927149f649
+
+
+Contract Information:
+
+Basic information:
+Token name: Investacoin
+Token Symbol: INV
+Decimal points accepted: 8 
+Total Supply: 50000000
+
+Usage Information:
+
+Creation of Tokens: createTokens function can be used to create the tokens upto totalsupply.
+ERC - 20 compatible: All ERC - 20 compatible functions are there like, transfer, transferfrom, approve etc.
+Extra facility:
+
+Owner facility: 
+
+The deployer of the code will be the first owner. 
+Only owner can create or mint tokens.
+Createtoken function will send all tokens to the owner automatically.
+Current owner can give the ownership to other address.
+
+
+freeze and unfreeze transfer:
+
+Owner can freeze and unfreeze ALL the transfer of tokens, freezeTransfer and unfreezeTransfer can be invoked to implement this facility.
+when the code is deployed, automatically all transfer will be in unfreezed state.
+Depending on the situation owner will freeze/unfreeze the transfer. Then all token holders can or cannot trade/send the tokens to each other and to exchanges.
+You can also freeze one particular account and unfreeze it later.
+
+ICO cryptocurrency support:
+
+This contract does not send the tokens automatically when the eth is received. All tokens will be distributed manually once ICO is over.
+You have can use some payment provider like coinpayments to create multiple cryptocurrency account, where the buyer will send
+ETH, BTC and other cryptocurrencies. After ICO calculate the equivalent ampount of tokens and distribute it to the buyers.
+Or you can give addresses of BTC and ETH of your own and ask the buyer to send eth or BTC to that account. then after ICO you can create and transfer tokens using this contract.
+
+
+Deployment to mainnet:
+
+1. Install metamask plugin on Chrome Browser and create account: https://youtu.be/Vj9ztSdKSPU
+2. Make sure you are connected to mainnet, you can check using upper left corner of the metamsk plugin.
+3. Put some real ether on it. (min 0.1 ETH for safe side)
+4. open the site: https://remix.ethereum.org
+5. in the left hand upper corner you can see a folder sign.
+6. Click on that and select the token contract solidity file.
+7. Click on the run tab at the upper right corner.
+8. Verify that 
+      Environment: Injected Web3 main 1
+	  Account Address: your address which is associated with metamask.
+9. After the value letter you can see one dropdown to select the contract name: Select DRCGToken 
+10. Click on run (do not close the Browser tab)
+11. Metamask notification will be popped up.
+12. Enter 
+     Gas Limit: 2700000
+     Gas Price : 21 Gwei
+	 
+13. Click on submit.
+
+14. Now you can check your account on etherscan: https://etherscan.io/	 
+	  
+15. Once the contract is created , come back to Remix browser.
+
+16. You can see there is a createToken function at right hand side.
+
+Enter the following exactly with quotes in the text box adjacent to CreateTokens button
+
+"5000000000000000"
+
+with:
+Gas Limit: 2700000
+Gas Price : 21 Gwei
+
+
+Hit Create tokens
+
+Now you can check the latest transaction that 50000000 token is created and deposited to your account.
+Using createtoken you can create upto 50000000 tokens and that will be transfferd to current owner. 
+Only owner can create the tokens
+
+17. ADD custom token to your metamask
+Please follow the instructions. 
+https://medium.com/hellogold/adding-tokens-to-metamask-60b2fedd5bd9
+
+18. Now go to the browser again and click on unfreeze tokens (if you want to transfer it to some address)
+
+19. If you want to freeze all transfer then just click freeze tokens again.
+
+20. If you want to lock/freeze a particular account then 
+Put the address and true parameter exactly with quotes.
+Hit freexeAccount function.
+
+for eg: 
+
+"0x9097db904ADc129A18b70C314aA231114702AD48",1
+
+for unfreeze in future you can use the value false
+
+for eg:
+
+"0x9097db904ADc129A18b70C314aA231114702AD48",0
+
+Here 0 and 1 are boolean value so no quotes around them.
+
+  
+	  
+
+
+
+
+
